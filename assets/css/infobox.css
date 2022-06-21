@@ -1,0 +1,42 @@
+.infobox {
+    min-width: 250px;
+    margin-left: -125px;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    bottom: 30px;
+    -webkit-animation: infobox_fadein 0.5s, infobox_fadeout 0.5s 2.5s;
+    animation: infobox_fadein 0.5s, infobox_fadeout 0.5s 2.5s;
+}
+
+.infobox_error {
+    background-color: #f44336;
+}
+
+.infobox_success {
+    background-color: #3cba87;
+}
+
+@-webkit-keyframes infobox_fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes infobox_fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes infobox_fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes infobox_fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
