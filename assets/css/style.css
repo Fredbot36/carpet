@@ -232,10 +232,10 @@ strong {
     transform: translate(0, -50%);
 }
 
-/* WINDOWS */
+/* MODALS */
 
-/* The window (background) */
-.window {
+/* The modal (background) */
+.modal {
     display: none;
     position: fixed;
     z-index: 3;
@@ -247,8 +247,8 @@ strong {
     background-color: rgba(0,0,0,0.4);
 }
 
-/* Window Content/Box */
-.window-content {
+/* modal Content/Box */
+.modal-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
@@ -256,7 +256,7 @@ strong {
     width: 80%;
 }
 
-.window:target {
+.modal:target {
     display: block;
 }
 
