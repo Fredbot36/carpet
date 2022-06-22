@@ -1,5 +1,5 @@
 /* COPY LINK */
-function copyToClipboard(copyText) {
+function copyToClipboard(copyText, successMessage) {
     navigator.clipboard.writeText(copyText);
-    infobox('success', 'Link wurde kopiert!')
+    infobox('success', successMessage)
 }
