@@ -76,31 +76,6 @@ strong {
     font-weight: bold;
 }
 
-.site-links {
-    margin-bottom: 3rem;
-}
-
-.site-links a {
-    margin-right: 13px;
-    margin-left: 13px;
-}
-
-.social-links a {
-    margin-right: 7px;
-    margin-left: 7px;
-}
-
-.link:hover {
-    color: #8fd6f9;
-    cursor: pointer;
-}
-
-.links a {
-    color: rgba(255, 255, 255, 0.6);
-    text-shadow: 0.1rem 0.1rem #000000;
-    text-decoration: unset;
-}
-
 #content {
     display: flex;
     flex-direction: column;
@@ -115,4 +90,188 @@ strong {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* LINKS */
+
+.links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0.1rem 0.1rem #000000;
+    text-decoration: unset;
+}
+
+.link:hover {
+    color: #8fd6f9;
+    cursor: pointer;
+}
+
+.site-links a {
+    display: inline-block;
+    margin-bottom: 1.4rem;
+    margin-right: 13px;
+    margin-left: 13px;
+}
+
+.social-links a {
+    margin-right: 7px;
+    margin-left: 7px;
+}
+
+/* TOOLTIPS */
+/*
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,500,500i,700,700i');
+
+/*tipped element. should be inline-block or block*/
+.tooltip {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-style: normal;
+    transition:all .25s ease-in-out
+}
+
+/*the tip*/
+/*
+.tooltip:before {
+    content: attr(tooltiptext);
+    font-size: 14px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.87);
+    color: black;
+    line-height: 1.2em;
+    padding: 0.5em;
+    font-style: normal;
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.87);
+    min-width: 50px;
+    max-width: 220px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-family: sans-serif;
+}
+.tooltip:after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    content: '';
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out
+}
+.tooltip:hover:before,
+.tooltip:hover:after {
+    visibility: visible;
+    opacity: 1
+}
+/*top*/
+/*
+.tooltip.tooltip-top:before {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 8px));
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.tooltip.tooltip-top:after {
+    border-width: 8px 8px 0 8px;
+    border-color: rgba(255, 255, 255, 0.87) transparent transparent transparent;
+    top: -8.079px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+/*bottom*/
+/*
+.tooltip.tooltip-bottom:before {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(100% + 8px));
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.tooltip.tooltip-bottom:after {
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent rgba(255, 255, 255, 0.87) transparent;
+    bottom: -8.079px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+/*left*/
+/*
+.tooltip.tooltip-left:before {
+    left: 0;
+    top: 50%;
+    transform: translate(calc(-100% - 8px), -50%);
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.tooltip.tooltip-left:after {
+    border-width: 8px 0 8px 8px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.87);
+    left: -8.079px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+/*right*/
+/*
+.tooltip.tooltip-right:before {
+    right: 0;
+    top: 50%;
+    transform: translate(calc(100% + 8px), -50%);
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.tooltip.tooltip-right:after {
+    border-width: 8px 8px 8px 0;
+    border-color: transparent rgba(255, 255, 255, 0.87) transparent transparent;
+    right: -8.079px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+/* WINDOWS */
+
+/* The window (background) */
+.window {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Window Content/Box */
+.window-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.window:target {
+    display: block;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: unset;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
