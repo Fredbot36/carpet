@@ -134,6 +134,18 @@ strong {
 .link.github:hover { color: #495057; }
 .link.facebook:hover { color: #2e77ef; }
 
+/* CREDITS */
+
+.credits {
+    position: fixed;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1;
+    z-index: 2;
+    color: rgb(58, 58, 58);
+}
+
 /* TOOLTIPS */
 /*
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,500,500i,700,700i');
