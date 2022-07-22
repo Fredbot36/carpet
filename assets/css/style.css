@@ -143,11 +143,11 @@ strong {
     font-size: 1.2rem;
     line-height: 1;
     z-index: 2;
-    color: rgb(73, 73, 73);
+    color: rgb(108, 108, 108);
 }
 
 .credits a {
-    color: rgb(91, 91, 91);
+    color: rgb(108, 108, 108);
     font-size: 1.35rem;
 }
 
