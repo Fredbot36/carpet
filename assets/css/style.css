@@ -147,7 +147,8 @@ strong {
 }
 
 .credits a {
-    color: rgb(73, 73, 73);
+    color: rgb(91, 91, 91);
+    font-size: 1.35rem;
 }
 
 /* TOOLTIPS */
