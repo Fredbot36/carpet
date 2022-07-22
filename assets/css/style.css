@@ -134,6 +134,20 @@ strong {
 .link.github:hover, .link.github:focus { color: #495057; }
 .link.facebook:hover, .link.facebook:focus { color: #2e77ef; }
 
+.imprint {
+    margin-top: -10px;
+}
+
+.imprint p {
+    color: rgba(196, 196, 196, 0.6);
+    font-size: 0.9em;
+}
+
+.imprint a {
+    color: rgba(196, 196, 196, 0.6);
+    font-size: 0.9em;
+}
+
 /* CREDITS */
 
 .credits {
@@ -144,11 +158,6 @@ strong {
     line-height: 1;
     z-index: 2;
     color: rgb(108, 108, 108);
-}
-
-.credits a {
-    color: rgb(108, 108, 108);
-    font-size: 1.35rem;
 }
 
 /* TOOLTIPS */
