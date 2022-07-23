@@ -392,3 +392,21 @@ strong {
     margin-top: 0.6rem;
     margin-bottom: 0.4rem;
 }
+
+.modal-body form {
+    display: inline;
+}
+
+.modal-body button {
+    border: none;
+    border-radius: 3px;
+    padding: 14px 28px;
+    cursor: pointer;
+    background-color: #e7e7e7;
+    color: black;
+    margin: 10px 4px;
+}
+
+.modal-body button:hover {
+    background: #ddd;
+}
