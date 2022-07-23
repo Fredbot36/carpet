@@ -361,3 +361,34 @@ strong {
 .modal-body::-webkit-scrollbar-thumb:hover {
     background: #313131;
 }
+
+.modal-body h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0;
+}
+
+.modal-body h2 {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-body h3 {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.modal-body h4 {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.modal-body h5 {
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.modal-body p {
+    margin-top: 0.6rem;
+    margin-bottom: 0.4rem;
+}
