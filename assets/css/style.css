@@ -302,19 +302,20 @@ strong {
 .modal {
     position: relative;
     background-color: rgb(39, 39, 39);
-    margin: 5%;
     border-radius: 10px;
-    width: 90%;
-    height: 80%;
+    width: 90vw;
+    height: 90vh;
+    top: 5vh;
+    left: 5vw;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     animation-name: animatetop;
-    animation-duration: 0.5s
+    animation-duration: 0.5s;
 }
 
 /* Add Animation */
 @keyframes animatetop {
     from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
+    to {top: 5vh; opacity: 1}
 }
 
 /* Modal Header */
