@@ -31,8 +31,19 @@
 
 </head>
 <body>
+
+<!--
+TODO: add website preloader (the video/image(s) should be loaded, before the website gets displayed)
+-->
+
+
 <video id="video" autoplay muted loop playsinline>
     <source src="assets/videos/background1.webm" type="video/webm; codecs=vp9">
+    <!--
+    TODO: multiple video formats
+    TODO: multiple smaller videos, that get randomly chosen when website loads (rerecord videos)
+    TODO: image on mobile devices
+    -->
 </video>
 
 <main>
@@ -114,7 +125,12 @@
     <i class="fa-regular fa-circle-question"></i>
 </div>
 
+<!-- MODALS -->
 <div class="overlay" id="informationen">
+    <!--
+    TODO: back to main page, when clicking outside of modal
+    TODO: make content outside of the modal inaccessible
+    -->
     <div class="modal">
         <div class="modal-header">
             <a class="close" href="#">&times;</a>
