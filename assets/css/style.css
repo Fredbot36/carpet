@@ -283,7 +283,7 @@ strong {
 /* MODALS */
 
 /* The modal (background) */
-.modal {
+.overlay {
     display: none;
     position: fixed;
     z-index: 3;
@@ -294,13 +294,13 @@ strong {
     background-color: rgba(0,0,0,0.4);
 }
 
-.modal:target {
+.overlay:target {
     display: block;
 }
 
-/* Modal Content/Box */
-.modal-content {
-    position: absolute;
+/* Modal */
+.modal {
+    position: relative;
     background-color: rgb(39, 39, 39);
     margin: 5%;
     border-radius: 10px;
@@ -341,63 +341,63 @@ strong {
     cursor: pointer;
 }
 
-/* Modal Body */
-.modal-body {
+/* Modal Content */
+.modal-content {
     padding: 2px 16px;
     overflow-y: auto;
     height: 87%;
     margin-bottom: 0;
 }
 
-.modal-body::-webkit-scrollbar {
+.modal-content::-webkit-scrollbar {
     width: 10px;
 }
 
-.modal-body::-webkit-scrollbar-thumb {
+.modal-content::-webkit-scrollbar-thumb {
     background: #343434;
     border-radius: 10px;
 }
 
-.modal-body::-webkit-scrollbar-thumb:hover {
+.modal-content::-webkit-scrollbar-thumb:hover {
     background: #313131;
 }
 
-.modal-body h1 {
+.modal-content h1 {
     font-size: 2.8rem;
     margin-bottom: 0;
 }
 
-.modal-body h2 {
+.modal-content h2 {
     font-size: 2.2rem;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
 }
 
-.modal-body h3 {
+.modal-content h3 {
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
 }
 
-.modal-body h4 {
+.modal-content h4 {
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
 }
 
-.modal-body h5 {
+.modal-content h5 {
     margin-top: 0.8rem;
     margin-bottom: 0.2rem;
 }
 
-.modal-body p {
+.modal-content p {
     margin-top: 0.6rem;
     margin-bottom: 0.4rem;
 }
 
-.modal-body form {
+.modal-content form {
     display: inline;
 }
 
-.modal-body button {
+.modal-content button {
     border: none;
     border-radius: 3px;
     padding: 14px 28px;
@@ -407,6 +407,6 @@ strong {
     margin: 10px 4px;
 }
 
-.modal-body button:hover {
+.modal-content button:hover {
     background: #ddd;
 }
