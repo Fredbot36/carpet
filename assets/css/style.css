@@ -397,6 +397,7 @@ strong {
     display: inline;
 }
 
+/*
 .modal-content button {
     border: none;
     border-radius: 3px;
@@ -405,7 +406,7 @@ strong {
     background-color: #e7e7e7;
     color: black;
     margin: 10px 4px;
-}
+}*/
 
 .modal-content button:hover {
     background: #ddd;
