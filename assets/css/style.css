@@ -165,20 +165,6 @@ strong {
     color: rgb(108, 108, 108);
 }
 
-/* TOOLTIPS */
-/*
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,500,500i,700,700i');
-
-/*tipped element. should be inline-block or block*/
-.tooltip {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    box-sizing: border-box;
-    font-style: normal;
-    transition:all .25s ease-in-out
-}
-
 /* MODALS */
 
 .overlay {
