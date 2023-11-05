@@ -1,7 +1,8 @@
 /* COPY LINK */
-function copyToClipboard(copyText, successMessage) {
+function copyToClipboard(copyText) {
     navigator.clipboard.writeText(copyText);
-    infobox('success', successMessage)
+    document.getElementById('ip-copy').style.backgroundColor = "rgba(60, 186, 135, 0.2)"
+    
 }
 
 /* back to main page when pressing ESC */
