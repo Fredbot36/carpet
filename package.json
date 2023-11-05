@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "copy": "mv ./.next/static ./.next/standalone/; cp -r ./public ./.next/standalone/",
+    "cleanup": "rm -r node_modules",
     "start": "next start",
     "lint": "next lint"
   },
@@ -23,6 +25,7 @@
     "postcss": "8.4.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sharp": "^0.32.6",
     "typescript": "5.0.4"
   },
   "devDependencies": {
