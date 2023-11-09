@@ -3,8 +3,18 @@
 import React from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleInfo, faHouse, faBook, faNewspaper, faGem, faMap, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import {
+    faCircleInfo,
+    faHouse,
+    faBook,
+    faNewspaper,
+    faGem,
+    faMap,
+    faArrowUpRightFromSquare,
+    faPlay
+} from '@fortawesome/free-solid-svg-icons'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
+import {usePathname} from "next/navigation";
 
 const links = [
     { href: "/", label: "Home", icon: faHouse, external: false},
@@ -18,6 +28,8 @@ const links = [
 
 export const NavBar = () => {
 
+    const path = usePathname();
+
     return (
         <nav className={"w-100 relative z-50 flex flex-col items-center"}>
             <div className={"fixed top-10 block"}>
@@ -27,9 +39,13 @@ export const NavBar = () => {
                             <Link
                                 href={link.href}
                                 target={link.external ? '_blank' : '_self'}
-                                className={"relative text-3xl text-neutral-200 hover:text-[#576490] bg-neutral-600/[.3] mx-2 mt-4 px-4 py-3 rounded-lg border border-white/[0.1]"}
+                                className={"relative text-2xl font-medium text-neutral-200 bg-neutral-600/[.3] mx-1 px-4 py-3 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0 "
+                                    + (link.href === path
+                                    ? "shadow-lg shadow-[#34B4F4]/[0.2] border-[#34B4F4]/[0.4] bg-white/[0.15] font-bold"
+                                    : "hover:border-white/[0.2] hover:shadow-lg hover:shadow-[#34B4F4]/[0.3] hover:bg-white/[0.15] focus:border-white/[0.2] focus:shadow-lg focus:shadow-[#34B4F4]/[0.3] focus:bg-white/[0.15]"
+                                )}
                             >
-                                <FontAwesomeIcon icon={link.icon} className={"text-3xl"}/>
+                                <FontAwesomeIcon icon={link.icon} className={"relative text-2xl top-[.0625rem] drop-shadow-lg"}/>
                                 &thinsp;&thinsp;
                                 {link.label}
                                 {/*{link.external &&*/}
