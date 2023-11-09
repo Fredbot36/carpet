@@ -1,14 +1,15 @@
 "use client";
 
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlay} from '@fortawesome/free-solid-svg-icons'
 import {AnimatePresence, motion, useInView} from 'framer-motion';
 
 export const BackgroundVideo = () => {
 
-    const backgroundVideo = useRef(null);
+    const backgroundVideo = useRef<HTMLVideoElement>(null!);
     const handlePlayVideo = () => {
+
         if (backgroundVideo.current.paused)
             backgroundVideo.current.play();
         else
@@ -23,7 +24,7 @@ export const BackgroundVideo = () => {
         setIsHovering(false);
     };
 
-    function useIsVisible(ref) {
+    function useIsVisible(ref: React.RefObject<any>) {
         return useInView(ref)
     }
 
@@ -42,7 +43,7 @@ export const BackgroundVideo = () => {
             </video>
 
             <AnimatePresence>
-                {useIsVisible(backgroundVideo) ? (
+                {useIsVisible(backgroundVideo!) ? (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
