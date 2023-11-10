@@ -24,6 +24,7 @@ export default function Home() {
 
                     {/* branding */}
                     <Image
+                        // needs to be fixed in production!!!
                         unoptimized
                         src={'/images/logo_lettering.png'}
                         alt={`CraftTogetherMC Logo`}

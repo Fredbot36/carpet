@@ -29,6 +29,7 @@ const links = [
 export const NavBar = () => {
 
     const path = usePathname();
+    console.log("path: '" + path + "'")
 
     return (
         <nav className={"w-100 relative z-50 flex flex-col items-center"}>
