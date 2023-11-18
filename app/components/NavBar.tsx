@@ -29,7 +29,6 @@ const links = [
 export const NavBar = () => {
 
     const path = usePathname();
-    console.log("path: '" + path + "'")
 
     return (
         <nav className={"w-100 relative z-50 flex flex-col items-center"}>
@@ -40,13 +39,13 @@ export const NavBar = () => {
                             <Link
                                 href={link.href}
                                 target={link.external ? '_blank' : '_self'}
-                                className={"relative text-3xl font-medium text-neutral-200 bg-neutral-600/[.3] mx-1 px-4 py-3 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0 "
+                                className={"relative text-[1.65rem] font-medium text-neutral-200 bg-neutral-600/[.3] mx-1 px-4 py-3 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0 "
                                     + (link.href === path
                                     ? "shadow-lg shadow-[#34B4F4]/[0.2] border-[#34B4F4]/[0.4] bg-white/[0.15] font-bold"
                                     : "hover:border-white/[0.2] hover:shadow-lg hover:shadow-[#34B4F4]/[0.3] hover:bg-white/[0.15] focus:border-white/[0.2] focus:shadow-lg focus:shadow-[#34B4F4]/[0.3] focus:bg-white/[0.15]"
                                 )}
                             >
-                                <FontAwesomeIcon icon={link.icon} className={"relative text-3xl top-[.0625rem] drop-shadow-lg"}/>
+                                <FontAwesomeIcon icon={link.icon} className={"relative text-[1.65rem] top-[.0625rem] drop-shadow-lg"}/>
                                 &thinsp;&thinsp;
                                 {link.label}
                                 {/*{link.external &&*/}
