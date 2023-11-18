@@ -23,10 +23,10 @@
     "eslint-config-next": "^14.0.2",
     "framer-motion": "^10.16.4",
     "next": "^14.0.2",
+    "next-auth": "^4.24.5",
     "postcss": "8.4.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.32.6",
     "typescript": "5.0.4"
   },
   "devDependencies": {
