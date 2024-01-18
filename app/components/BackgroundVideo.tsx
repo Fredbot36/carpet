@@ -49,20 +49,20 @@ export const BackgroundVideo = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5 }}
-                        className={"fixed top-[1.8rem] right-[1.8rem] block z-50"}
+                        className={"fixed top-5 right-[1.8rem] block z-50"}
                     >
                         <div className={"flex flex-row"}>
-                            <button className={"relative text-3xl font-medium text-neutral-200 bg-neutral-600/[.3] px-4 py-3 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0 hover:border-white/[0.2] hover:shadow-lg hover:shadow-[#34B4F4]/[0.3] hover:bg-white/[0.15]"}
+                            <button className={"relative text-lg font-medium text-neutral-200 bg-neutral-600/[.3] p-2 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0 hover:border-white/[0.2] hover:shadow-lg hover:shadow-[#34B4F4]/[0.3] hover:bg-white/[0.15]"}
                                 onClick={handlePlayVideo}
                                 onMouseOver={handleMouseOver}
                                 onMouseOut={handleMouseOut}
                             >
-                                <FontAwesomeIcon icon={faPlay} className={"relative text-3xl top-[.0625rem] drop-shadow-lg"}/>
-                                {isHovering && (
-                                    backgroundVideo.current.paused
-                                        ? (<span className={"text-2xl font-medium text-neutral-200"}>&thinsp;&thinsp;Video fortsetzen</span>)
-                                        : (<span className={"text-2xl font-medium text-neutral-200"}>&thinsp;&thinsp;Video pausieren</span>)
-                                )}
+                                <FontAwesomeIcon icon={faPlay} className={"relative text-lg top-[.0625rem] drop-shadow-lg"}/>
+                                {/*{isHovering && (*/}
+                                {/*    backgroundVideo.current.paused*/}
+                                {/*        ? (<span className={"text-2xl font-medium text-neutral-200"}>&thinsp;&thinsp;Video fortsetzen</span>)*/}
+                                {/*        : (<span className={"text-2xl font-medium text-neutral-200"}>&thinsp;&thinsp;Video pausieren</span>)*/}
+                                {/*)}*/}
                             </button>
                         </div>
                     </motion.div>

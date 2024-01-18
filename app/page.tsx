@@ -14,7 +14,7 @@ export default function Home() {
             <NavBar/>
 
             {/* HERO SECTION */}
-            <section id={"hero"} className={"h-[56rem] flex justify-center items-center box-border relative pt-16 px-12 pb-12 text-center"}>
+            <section id={"hero"} className={"h-[35rem] flex justify-center items-center box-border relative pt-16 px-12 pb-12 text-center"}>
 
                 {/* background video */}
                 <BackgroundVideo/>
