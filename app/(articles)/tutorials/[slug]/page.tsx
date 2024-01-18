@@ -1,0 +1,40 @@
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+
+import { MDXRemote } from 'next-mdx-remote/rsc'
+
+export async function generateStaticParams() {
+    const files = fs.readdirSync(path.join('content/tutorials'))
+
+    const paths = files.map(filename => ({
+        slug: filename.replace('.mdx', '')
+    }))
+
+    return paths
+}
+
+function getTutorials({slug}:{slug : string}){
+    const markdownFile = fs.readFileSync(path.join('content/tutorials',slug + '.mdx'), 'utf-8')
+
+    const { data: frontMatter, content } = matter(markdownFile)
+
+    return {
+        frontMatter,
+        slug,
+        content
+    }
+}
+
+export default function Tutorial({ params } :any) {
+    const props = getTutorials(params);
+
+    return (
+        <article className='prose prose-sm md:prose-base lg:prose-lg prose-slate !prose-invert mx-auto'>
+            {/*<h1>{props.frontMatter.title}</h1>*/}
+
+            {/* @ts-expect-error Server Component*/}
+            <MDXRemote source={props.content}/>
+        </article>
+    )
+}

@@ -10,5 +10,7 @@ module.exports = {
       'body': ['Railway']
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
 }
