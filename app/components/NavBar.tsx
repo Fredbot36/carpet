@@ -2,28 +2,17 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-    faCircleInfo,
-    faHouse,
-    faBook,
-    faNewspaper,
-    faGem,
-    faMap,
-    faArrowUpRightFromSquare,
-    faPlay
-} from '@fortawesome/free-solid-svg-icons'
-import { faDiscord } from '@fortawesome/free-brands-svg-icons'
+import { RiHome4Fill, RiNewspaperFill, RiBookMarkFill, RiVipDiamondFill, RiMap2Fill } from "react-icons/ri";
 import {usePathname} from "next/navigation";
 
 const links = [
-    { href: "/", label: "Home", icon: faHouse, external: false},
-    { href: "/news", label: "News", icon: faNewspaper, external: false},
-    { href: "/about", label: "Infos", icon: faCircleInfo, external: false},
-    { href: "/tutorials/regelwerk", label: "Regeln", icon: faBook, external: false},
-    { href: "/tutorials/voten", label: "Voten", icon: faGem, external: false},
-    { href: "https://map.craft-together-mc.de", label: "Livemap", icon: faMap, external: true},
-    // { href: "https://discord.craft-together-mc.de", label: "Discord", icon: faDiscord, external: true}
+    { href: "/", label: "Home", icon: RiHome4Fill, external: false},
+    { href: "/news", label: "News", icon: RiNewspaperFill, external: false},
+    // { href: "/about", label: "Infos", icon: faCircleInfo, external: false},
+    { href: "/tutorials/regelwerk", label: "Regeln", icon: RiBookMarkFill, external: false},
+    { href: "/tutorials/voten", label: "Votes", icon: RiVipDiamondFill, external: false},
+    { href: "https://map.craft-together-mc.de", label: "Livemap", icon: RiMap2Fill, external: true},
+    // { href: "https://discord.craft-together-mc.de", label: "Discord", icon: FaDiscord, external: true}
 ];
 
 export const NavBar = () => {
@@ -39,13 +28,13 @@ export const NavBar = () => {
                             <Link
                                 href={link.href}
                                 target={link.external ? '_blank' : '_self'}
-                                className={"relative text-lg font-medium text-neutral-200 bg-neutral-600/[.3] mx-0.5 p-2 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0 "
+                                className={"flex items-center h-9 text-lg font-normal text-neutral-200 bg-neutral-600/[.3] mx-0.5 p-2 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0"
                                     + (link.href === path
-                                    ? "shadow-lg shadow-[#34B4F4]/[0.2] border-[#34B4F4]/[0.4] bg-white/[0.15] font-bold"
-                                    : "hover:border-white/[0.2] hover:shadow-lg hover:shadow-[#34B4F4]/[0.3] hover:bg-white/[0.15] focus:border-white/[0.2] focus:shadow-lg focus:shadow-[#34B4F4]/[0.3] focus:bg-white/[0.15]"
+                                    ? "shadow-md shadow-[#34B4F4]/[0.2] border-[#34B4F4]/[0.4] bg-white/[0.12] font-bold"
+                                    : "hover:border-white/[0.2] hover:shadow-md hover:shadow-[#34B4F4]/[0.1] hover:bg-white/[0.12] focus:border-white/[0.2] focus:shadow-md focus:shadow-[#34B4F4]/[0.1] focus:bg-white/[0.12]"
                                 )}
                             >
-                                <FontAwesomeIcon icon={link.icon} className={"relative text-lg top-[.0625rem] drop-shadow-lg"}/>
+                                <link.icon className={"inline top-10 drop-shadow-lg"}/>
                                 &thinsp;&thinsp;
                                 {link.label}
                                 {/*{link.external &&*/}

@@ -1,8 +1,7 @@
 "use client";
 
 import React, {useRef, useState} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faPlay} from '@fortawesome/free-solid-svg-icons'
+import { RiPlayFill } from "react-icons/ri";
 import {AnimatePresence, motion, useInView} from 'framer-motion';
 
 export const BackgroundVideo = () => {
@@ -52,12 +51,12 @@ export const BackgroundVideo = () => {
                         className={"fixed top-5 right-[1.8rem] block z-50"}
                     >
                         <div className={"flex flex-row"}>
-                            <button className={"relative text-lg font-medium text-neutral-200 bg-neutral-600/[.3] p-2 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0 hover:border-white/[0.2] hover:shadow-lg hover:shadow-[#34B4F4]/[0.3] hover:bg-white/[0.15]"}
+                            <button className={"relative text-lg font-medium text-neutral-200 bg-neutral-600/[.3] mx-0.5 p-2 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0 hover:border-white/[0.2] hover:shadow-md hover:shadow-[#34B4F4]/[0.1] hover:bg-white/[0.12] focus:border-white/[0.2] focus:shadow-md focus:shadow-[#34B4F4]/[0.1] focus:bg-white/[0.12]"}
                                 onClick={handlePlayVideo}
                                 onMouseOver={handleMouseOver}
                                 onMouseOut={handleMouseOut}
                             >
-                                <FontAwesomeIcon icon={faPlay} className={"relative text-lg top-[.0625rem] drop-shadow-lg"}/>
+                                <RiPlayFill className={"relative text-lg top-[.0625rem] drop-shadow-lg"}/>
                                 {/*{isHovering && (*/}
                                 {/*    backgroundVideo.current.paused*/}
                                 {/*        ? (<span className={"text-2xl font-medium text-neutral-200"}>&thinsp;&thinsp;Video fortsetzen</span>)*/}
