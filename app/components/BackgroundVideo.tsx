@@ -1,18 +1,23 @@
 "use client";
 
 import React, {useRef, useState} from 'react';
-import { RiPlayFill } from "react-icons/ri";
+import { RiPlayFill, RiPauseFill } from "react-icons/ri";
 import {AnimatePresence, motion, useInView} from 'framer-motion';
 
 export const BackgroundVideo = () => {
 
     const backgroundVideo = useRef<HTMLVideoElement>(null!);
+    const [isPlaying, setIsPlaying] = useState(true);
     const handlePlayVideo = () => {
 
-        if (backgroundVideo.current.paused)
+        if (backgroundVideo.current.paused) {
             backgroundVideo.current.play();
-        else
+            setIsPlaying(true);
+        } else {
             backgroundVideo.current.pause();
+            setIsPlaying(false);
+        }
+
     }
 
     const [isHovering, setIsHovering] = useState(false);
@@ -51,17 +56,16 @@ export const BackgroundVideo = () => {
                         className={"fixed top-5 right-[1.8rem] block z-50"}
                     >
                         <div className={"flex flex-row"}>
-                            <button className={"relative text-lg font-medium text-neutral-200 bg-neutral-600/[.3] mx-0.5 p-2 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0 hover:border-white/[0.2] hover:shadow-md hover:shadow-[#34B4F4]/[0.1] hover:bg-white/[0.12] focus:border-white/[0.2] focus:shadow-md focus:shadow-[#34B4F4]/[0.1] focus:bg-white/[0.12]"}
+                            <button className={"relative h-9 text-lg font-medium text-neutral-200 bg-neutral-600/[.3] mx-0.5 p-2 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0 hover:border-white/[0.2] hover:shadow-md hover:shadow-[#34B4F4]/[0.1] hover:bg-white/[0.12] focus:outline-1"}
                                 onClick={handlePlayVideo}
                                 onMouseOver={handleMouseOver}
                                 onMouseOut={handleMouseOut}
                             >
-                                <RiPlayFill className={"relative text-lg top-[.0625rem] drop-shadow-lg"}/>
-                                {/*{isHovering && (*/}
-                                {/*    backgroundVideo.current.paused*/}
-                                {/*        ? (<span className={"text-2xl font-medium text-neutral-200"}>&thinsp;&thinsp;Video fortsetzen</span>)*/}
-                                {/*        : (<span className={"text-2xl font-medium text-neutral-200"}>&thinsp;&thinsp;Video pausieren</span>)*/}
-                                {/*)}*/}
+                                {isPlaying
+                                    ? (<RiPauseFill className={"relative text-lg drop-shadow-lg"}/>)
+                                    : (<RiPlayFill className={"relative text-lg drop-shadow-lg"}/>)
+                                }
+
                             </button>
                         </div>
                     </motion.div>
