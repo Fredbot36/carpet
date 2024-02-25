@@ -59,7 +59,7 @@ export default function Home() {
                                 du wie im Singleplayer — nur mit anderen Spielern — Vanilla-Minecraft spielen.
                             </p>
 
-                            <div className={`flex flex-row items-stretch space-x-2 mt-5`}>
+                            <div className={`flex flex-row items-stretch space-x-2 mt-5 font-semibold`}>
                                 <button className={`grow rounded-lg border border-2 border-white/[0.1] bg-green-800/[.4] h-12`}>Jetzt Joinen!</button>
                                 <button className={`grow rounded-lg border border-2 border-white/[0.1] bg-cyan-800/[.4] h-12`}>Weitere Informationen</button>
                             </div>
