@@ -15,7 +15,6 @@ export default function Impressum() {
     return (
         <>
             <div className={`prose prose-invert`}>
-                {/* @ts-expect-error Async Server Component */}
                 <MDXRemote source={markdownFile}/>
             </div>
         </>
