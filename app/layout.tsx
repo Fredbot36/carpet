@@ -3,7 +3,7 @@ import { Fira_Sans } from 'next/font/google'
 import { NavBar } from '@/app/components/NavBar'
 import Link from 'next/link'
 
-const fira = Fira_Sans({ subsets: ['latin'], weight: "400" })
+const fira = Fira_Sans({ subsets: ['latin'], weight: "400", display: "swap" })
 
 export const metadata = {
   title: {
