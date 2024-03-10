@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "copy": "mv ./.next/static ./.next/standalone/; cp -r ./public ./.next/standalone/",
-    "cleanup": "rm -r node_modules",
+    "cleanup": "",
     "start": "next start",
     "lint": "next lint"
   },
