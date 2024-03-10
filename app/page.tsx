@@ -2,7 +2,7 @@ import Image from 'next/image'
 import {Inter} from 'next/font/google'
 import {NavBar} from "@/app/components/NavBar";
 import {BackgroundVideo} from "@/app/components/BackgroundVideo";
-import YouTubePlayer from '@/app/components/YouTubePlayer';
+import VideoPlayer from "@/app/components/VideoPlayer";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -41,14 +41,15 @@ export default function Home() {
 
             </section>
 
-            <section id={"content"}>
+            <section id={"content"} className={`mb-20`}>
 
                 <div className={`flex justify-center items-center w-full relative`}>
-                    <div className={`flex flex-row items-center p-4 -mt-28 m-x-auto p-y-auto w-2/3 space-x-4 text-md font-normal text-neutral-200/[.9] bg-neutral-900/[.9] rounded-lg border border-white/[0.1]`}>
-                        <div>
-                            <YouTubePlayer videoId="nY82tthVJm8" width="448" height="252"/>
+                    <div className={`flex flex-col xl:flex-row sm:w-2/3 mx-10 max-xl:space-y-4 xl:space-x-4 items-center p-4 -mt-28 p-y-auto text-md font-normal text-neutral-200/[.9] bg-neutral-900/[.9] rounded-lg border border-white/[0.1]`}>
+                        <div className={`w-full h-full max-w-[448px] max-h-[252px] md:min-w-[448px] md:min-h-[252px]`}>
+                            {/*  TODO: Add skelleton  */}
+                            <VideoPlayer url={"https://youtu.be/nY82tthVJm8"}/>
                         </div>
-                        <div className={`items-center px-4`}>
+                        <div className={`items-center sm:px-4 lg:px-8 xl:px-4`}>
                             <p>
                                 <b>CraftTogetherMC</b> ist ein gemütlicher, aufstrebender Minecraft-Server
                                 und richtet sich an Freunde des <b>originalgetreuen (Vanilla) Minecraft</b>.
@@ -60,8 +61,8 @@ export default function Home() {
                             </p>
 
                             <div className={`flex flex-row items-stretch space-x-2 mt-5 font-semibold`}>
-                                <button className={`grow rounded-lg border border-2 border-white/[0.1] bg-green-800/[.4] h-12`}>Jetzt Joinen!</button>
-                                <button className={`grow rounded-lg border border-2 border-white/[0.1] bg-cyan-800/[.4] h-12`}>Weitere Informationen</button>
+                                <button className={`grow rounded-lg border border-2 border-white/[0.1] bg-green-800/[.4] min-h-12 p-1`}>Jetzt Joinen!</button>
+                                <button className={`grow rounded-lg border border-2 border-white/[0.1] bg-cyan-800/[.4] min-h-12 p-1`}>Weitere Informationen</button>
                             </div>
                         </div>
                     </div>
@@ -72,6 +73,12 @@ export default function Home() {
                 </div>
 
             </section>
+            {/*
+            TODO: Insert Credits
+
+            CraftTogetherMC "Carpet" by [Ceddix](https://cedrik.me)
+            Trailer & Background Video by Ashia
+            */}
 
         </>
     )

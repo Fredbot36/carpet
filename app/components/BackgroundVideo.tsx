@@ -2,7 +2,7 @@
 
 import React, {useRef, useState} from 'react';
 import { RiPlayFill, RiPauseFill } from "react-icons/ri";
-import {AnimatePresence, motion, useInView} from 'framer-motion';
+import { AnimatePresence, motion, useInView } from 'framer-motion';
 
 export const BackgroundVideo = () => {
 
@@ -53,9 +53,9 @@ export const BackgroundVideo = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5 }}
-                        className={"fixed top-5 right-[1.8rem] block z-50"}
+                        className={"fixed top-6 right-[1.8rem] block z-50"}
                     >
-                        <div className={"flex flex-row"}>
+                        <div className={"flex flex-row max-md:hidden"}>
                             <button className={"relative h-9 text-lg font-medium text-neutral-200 bg-neutral-600/[.3] mx-0.5 p-2 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0 hover:border-white/[0.2] hover:shadow-md hover:shadow-[#34B4F4]/[0.1] hover:bg-white/[0.12] focus:outline-1"}
                                 onClick={handlePlayVideo}
                                 onMouseOver={handleMouseOver}

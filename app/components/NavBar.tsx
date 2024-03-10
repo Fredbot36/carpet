@@ -28,15 +28,16 @@ export const NavBar = () => {
                             <Link
                                 href={link.href}
                                 target={link.external ? '_blank' : '_self'}
-                                className={"flex items-center h-9 text-lg font-normal text-neutral-200 bg-neutral-600/[.3] mx-0.5 p-2 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0"
+                                className={"flex items-center h-9 font-normal text-lg text-neutral-200 bg-neutral-600/[.3] mx-0.5 p-2 rounded-lg border border-white/[0.1] transition ease-in-out duration-500 focus:outline-0 "
                                     + (link.href === path
                                     ? "shadow-md shadow-[#34B4F4]/[0.2] border-[#34B4F4]/[0.4] bg-white/[0.12] font-bold"
                                     : "hover:border-white/[0.2] hover:shadow-md hover:shadow-[#34B4F4]/[0.1] hover:bg-white/[0.12] focus:border-white/[0.2] focus:shadow-md focus:shadow-[#34B4F4]/[0.1] focus:bg-white/[0.12]"
                                 )}
                             >
-                                <link.icon className={"inline top-10 drop-shadow-lg"}/>
-                                &thinsp;&thinsp;
-                                {link.label}
+                                <link.icon className={"inline top-10 drop-shadow-lg text-lg"}/>
+                                <div className={(link.href === path ? "" : "max-md:text-[0]")}>
+                                    &thinsp;&thinsp;{link.label}
+                                </div>
                                 {/*{link.external &&*/}
                                 {/*    <>*/}
                                 {/*        &thinsp;<sup><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></sup>*/}
