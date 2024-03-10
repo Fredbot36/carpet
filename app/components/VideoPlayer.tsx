@@ -24,6 +24,6 @@ export default function VideoPlayer(props: { url: any; controls?: boolean; playi
                     // picture in picture
                     pip={false}
                 />
-            </div> : <p>There was an error loading the video player!</p>
+            </div> : <p>Video player loading...</p>
     )
 };

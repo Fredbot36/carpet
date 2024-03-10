@@ -37,8 +37,8 @@ export default function RootLayout({
 
             <div>
               <p><b><Link href={"/"}>CraftTogetherMC</Link></b> – Freebuild mit Vanilla-Feeling</p>
-              <p className={`text-neutral-400`}>We are not affiliated with or endorsed by Mojang, AB.</p>
-              <small>Created with ♥️ by <a target="_blank" href="https://cedrik.me">Ceddix</a></small>
+              <p className={`text-neutral-400`}>We are not affiliated with or endorsed by <Link target="_blank" href={"https://www.minecraft.net/de-de"}>Mojang, AB</Link>.</p>
+              <small>Created with ♥️ by <Link target="_blank" href="https://cedrik.me">Ceddix</Link></small>
             </div>
 
             <div>
