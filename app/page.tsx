@@ -24,7 +24,6 @@ export default function Home() {
                     {/* branding */}
                     <Image
                         // needs to be fixed in production!!!
-                        unoptimized
                         src={'/images/logo_lettering.png'}
                         alt={`CraftTogetherMC Logo`}
                         className={"inline-block object-cover cursor-pointer transition transform duration-500 hover:scale-105 drop-shadow-2xl"}
