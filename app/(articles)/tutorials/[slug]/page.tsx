@@ -33,7 +33,6 @@ export default function Tutorial({ params } :any) {
         <article className='prose prose-sm md:prose-base lg:prose-lg prose-slate !prose-invert mx-auto'>
             {/*<h1>{props.frontMatter.title}</h1>*/}
 
-            {/* @ts-expect-error Server Component*/}
             <MDXRemote source={props.content}/>
         </article>
     )
