@@ -40,7 +40,7 @@ export default function Home() {
             <section id={"content"}>
 
                 <div className={`flex justify-center items-center w-full relative`}>
-                    <div className={`flex flex-col xl:flex-row sm:w-2/3 mx-10 max-xl:space-y-4 xl:space-x-4 items-center p-4 -mt-28 p-y-auto text-md font-normal text-neutral-200/[.9] bg-neutral-900/[.9] rounded-lg border border-white/[0.1]`}>
+                    <div className={`flex flex-col xl:flex-row sm:w-2/3 max-w-[62rem] mx-10 max-xl:space-y-4 xl:space-x-4 items-center p-4 -mt-28 p-y-auto text-md font-normal text-neutral-200/[.9] bg-neutral-900/[.9] rounded-lg border border-white/[0.1]`}>
 
                         <div className={`w-full h-full max-w-[448px] max-h-[252px] md:min-w-[448px] md:min-h-[252px]`}>
                             {/*  TODO: Add skelleton  */}
@@ -59,7 +59,7 @@ export default function Home() {
                                 du wie im Singleplayer — nur mit anderen Spielern — Vanilla-Minecraft spielen.
                             </p>
 
-                            <div className={`flex flex-row items-stretch space-x-2 mt-5 font-semibold`}>
+                            <div className={`flex flex-row items-stretch space-x-2 mt-5`}>
                                 <button className={`grow rounded-lg border border-2 border-white/[0.1] bg-green-800/[.4] min-h-12 p-1`}>Jetzt Joinen!</button>
                                 <button className={`grow rounded-lg border border-2 border-white/[0.1] bg-cyan-800/[.4] min-h-12 p-1`}>Weitere Informationen</button>
                             </div>
