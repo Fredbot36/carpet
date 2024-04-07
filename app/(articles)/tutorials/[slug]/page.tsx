@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-import { MDXRemote } from 'next-mdx-remote/rsc'
+import Article from "@/app/components/Article";
 
 export async function generateStaticParams() {
     const files = fs.readdirSync(path.join('content/tutorials'))
@@ -26,14 +26,10 @@ function getTutorials({slug}:{slug : string}){
     }
 }
 
-export default function Tutorial({ params } :any) {
+export default function Tutorial({ params } : any) {
     const props = getTutorials(params);
 
     return (
-        <article className='prose prose-sm md:prose-base lg:prose-lg prose-slate !prose-invert mx-auto'>
-            {/*<h1>{props.frontMatter.title}</h1>*/}
-
-            <MDXRemote source={props.content}/>
-        </article>
+        <Article title={props.frontMatter.title} content={props.content} category={"Tutorials"} lastUpdated={props.frontMatter.lastUpdated} imageUrl={props.frontMatter.imageUrl}></Article>
     )
 }
