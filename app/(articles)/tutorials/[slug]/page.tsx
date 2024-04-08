@@ -4,6 +4,13 @@ import matter from 'gray-matter'
 
 import Article from "@/app/components/Article";
 
+export async function generateMetadata({ params }: any) {
+    const props = getTutorials(params);
+    return {
+        title: props.frontMatter.title + ' – Tutorials',
+    }
+}
+
 export async function generateStaticParams() {
     const files = fs.readdirSync(path.join('content/tutorials'))
 
@@ -31,5 +38,7 @@ export default function Tutorial({ params } : any) {
 
     return (
         <Article title={props.frontMatter.title} content={props.content} category={"Tutorials"} lastUpdated={props.frontMatter.lastUpdated} imageUrl={props.frontMatter.imageUrl}></Article>
+        /* TODO: suggest next tutorial */
+        /* TODO: other articles */
     )
 }

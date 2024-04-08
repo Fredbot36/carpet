@@ -8,7 +8,7 @@ const fira = Fira_Sans({ subsets: ['latin'], weight: "400", display: "swap" })
 export const metadata = {
   title: {
     default: 'CraftTogetherMC',
-    template: '%s | CraftTogetherMC',
+    template: '%s – CraftTogetherMC',
   },
   keywords: 'minecraft server vanilla freebuild survival citybuild craft together creeper mobspawn redstone craft attack',
   description: 'CraftTogetherMC ist ein gemütlicher, aufstrebender Minecraft-Server und richtet sich an Freunde des originalgetreuen Minecraft. Gespielt wird \'Survival\' im Freebuild! Es gibt bei uns keine Plots, Claims oder Grundstücke. Der perfekte Server für CraftAttack-Fans.',
