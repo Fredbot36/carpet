@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { RiHome4Fill, RiNewspaperFill, RiBookMarkFill, RiVipDiamondFill, RiMap2Fill } from "react-icons/ri";
+import { RiHome4Fill, RiNewspaperFill, RiBookmarkFill, RiVipDiamondFill, RiMap2Fill } from "react-icons/ri";
 import {usePathname} from "next/navigation";
 
 const links = [
