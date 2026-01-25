@@ -9,7 +9,7 @@ const links = [
     { href: "/", label: "Home", icon: RiHome4Fill, external: false},
     { href: "/news", label: "News", icon: RiNewspaperFill, external: false},
     // { href: "/about", label: "Infos", icon: faCircleInfo, external: false},
-    { href: "/tutorials/regelwerk", label: "Regeln", icon: RiBookMarkFill, external: false},
+    { href: "/tutorials/regelwerk", label: "Regeln", icon: RiBookmarkFill, external: false},
     { href: "/tutorials/voten", label: "Votes", icon: RiVipDiamondFill, external: false},
     { href: "https://map.craft-together-mc.de", label: "Livemap", icon: RiMap2Fill, external: true},
     // { href: "https://discord.craft-together-mc.de", label: "Discord", icon: FaDiscord, external: true}
