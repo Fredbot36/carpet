@@ -5,6 +5,7 @@ import VideoPlayer from "@/app/components/VideoPlayer";
 import { RiInstagramLine, RiTiktokLine, RiTwitterXLine, RiYoutubeLine } from 'react-icons/ri';
 import { LuFacebook } from "react-icons/lu";
 
+
 const inter = Inter({subsets: ['latin']})
 
 export default function Home() {
