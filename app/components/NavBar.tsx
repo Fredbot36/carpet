@@ -12,7 +12,7 @@ const links = [
     { href: "/tutorials/regelwerk", label: "Regeln", icon: RiBookmarkFill, external: false},
     { href: "/tutorials/votes", label: "Votes", icon: RiVipDiamondFill, external: false},
     { href: "https://map.craft-together-mc.de", label: "Livemap", icon: RiMap2Fill, external: true},
-    { href: "/dashboard_umb", label: "ADMINPAGE Vorübergehend", icon: RiMap2Fill, external: false},
+    { href: "/dashboard", label: "ADMINPAGE Vorübergehend", icon: RiMap2Fill, external: false},
     // { href: "https://discord.craft-together-mc.de", label: "Discord", icon: FaDiscord, external: true}
 ];
 
